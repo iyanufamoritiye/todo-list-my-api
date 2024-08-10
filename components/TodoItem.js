@@ -14,6 +14,9 @@ const TodoItem = ({ todo }) => {
   const handleEdit = () => {
     router.push(`/todos/edit/${todo.id}`);
   };
+  const handleView = () => {
+    router.push(`/todos/${todo.id}`);
+  };
 
   return (
     <div className="flex   justify-between text-gray-950   items-center gap-4 p-4 border-4  bg-white  rounded w-full sm:w-2/3 lg:w-1/2 mx-auto">
@@ -23,12 +26,12 @@ const TodoItem = ({ todo }) => {
         <p>ID: {todo.id}</p>
       </div>
       <div className="flex space-x-2">
-        <a
-          href={`/todos/${todo.id}`}
+        <button
+          onClick={handleView}
           className="bg-gray-500 text-white p-2 rounded"
         >
           View
-        </a>
+        </button>
         <button
           onClick={handleEdit}
           className="bg-yellow-500 text-white p-2 rounded"
