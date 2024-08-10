@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchTodos } from "../../redux/todoSlice";
 import TodoItem from "../../components/TodoItem";
-import Link from "next/link";
 import TodoForm from "@/components/TodoForm";
 
 const TodoList = () => {
